@@ -1,0 +1,49 @@
+ul {
+    list-style-type: none;
+}
+
+.search {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 3%;
+    width: 626px;
+    height: 2rem;
+}
+
+.search > * {
+    height: 100%;
+    width: 100%;
+}
+
+.buttons {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons > * {
+    height: 40px;
+    width: 100px;
+}
+
+.imgList {
+    padding: 0 2%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.imgListEl {
+    margin: 40px auto 5% auto;
+}
+
+.cardImg {
+    position: relative;
+    border-radius: 5px;
+}
+
+.cardTitle {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    color: white;
+}

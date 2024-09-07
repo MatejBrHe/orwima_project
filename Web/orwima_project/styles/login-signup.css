@@ -1,0 +1,19 @@
+.login {
+    margin: 50px auto;
+    height: auto;
+    width: 400px;
+}
+
+.login > form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login > form > input {
+    margin-top: 50px;
+}
+
+.login > p {
+    width: max-content;
+}

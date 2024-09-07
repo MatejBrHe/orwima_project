@@ -1,0 +1,117 @@
+* {
+    font-family: 'Source Code Pro';
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "main main main";
+}
+
+header {
+    background-color: darkorange;
+    color: white;
+    height: 5rem;
+    grid-area: header;
+}
+
+header > * {
+    margin: 0;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+}
+
+h1 {
+    left: 1rem;
+}
+
+.user {
+    right: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.user:hover {
+    right: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.user > h3 {
+    margin-right: 5px;
+    text-align: center;
+    color: white;
+}
+
+main {
+    grid-area: main;
+}
+
+.centerHorizontal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerVerticaly {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+aside {
+    position: absolute;
+    right: 0%;
+    top: 5rem;
+    height: auto;
+    width: 250px;
+    background-color: darkorange;
+}
+
+aside > div {
+    position: absolute;
+    right: 0%;
+    width: 215px;
+    background-color: darkorange;
+    border-radius: 0px 0px 0px 10px;
+    border-left: 6px solid white;
+    border-bottom: 6px solid white;
+}
+
+aside > div > .user {
+    margin-left: 10px;
+    margin-top: 1rem;
+    height: 3rem;
+    width: auto;
+}
+
+aside > div > ul {
+    margin-top: 1rem;
+    width: auto;
+}
+
+aside > div > ul > li > a {
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+aside > div > ul > li > a:hover {
+    color: white;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+}

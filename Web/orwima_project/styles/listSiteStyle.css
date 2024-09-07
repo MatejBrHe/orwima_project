@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+}
+
+.imgList {
+    padding: 0 2%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.imgListEl {
+    margin: 40px auto 5% auto;
+}
+
+.cardImg {
+    position: relative;
+    border-radius: 5px;
+}
+
+.cardTitle {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    color: white;
+}
