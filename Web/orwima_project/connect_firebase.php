@@ -8,4 +8,5 @@
 		->withDatabaseUri('https://orwima-project-mbh-default-rtdb.europe-west1.firebasedatabase.app/');
 
 	$database = $firebase->createDatabase();
+
 ?>

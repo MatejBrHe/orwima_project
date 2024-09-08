@@ -1,7 +1,10 @@
 .login {
     margin: 50px auto;
     height: auto;
-    width: 400px;
+    width: 450px;
+    background-color: #cccccc;
+    border-radius: 10px;
+    padding: 10px 20px;
 }
 
 .login > form {

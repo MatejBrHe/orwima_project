@@ -3,9 +3,8 @@ ul {
 }
 
 .title {
-    height: min-content;
-    width: min-content;
-    margin-left: 100px;
+    height: auto;
+    width: max-content;
     margin-top: 40px;
     margin-bottom: 60px;
 }
@@ -33,8 +32,8 @@ ul {
 .image-gallery {
     grid-column: 1/3;
     grid-row: 1;
-    height: 430px;
-    width: 1700px;
+    height: auto;
+    width: auto;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
@@ -58,7 +57,6 @@ ul {
 }
 
 .rating {
-    margin-left: 100px;
     width: 300px;
     height: min-content;
 }
@@ -82,19 +80,29 @@ ul {
 }
 
 .comment-section {
-    margin-left: 100px;
+    width: max-content;
     margin-top: 60px;
 }
 
-.comment-section > h3 {
+.comment-section > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.comment-section > div > h3 {
+    width: max-content;
     font-size: 2rem;
+    color: darkorange;
+}
+
+.comment-section > div > a {
+    margin-left: auto;
     color: darkorange;
 }
 
 .comment {
     height: min-content;
-    max-width: 500px;
-    min-width: min-content;
+    width: 500px;
     border-radius: 5px 20px 20px 20px;
     background-color: darkorange;
     color: white;
@@ -116,4 +124,5 @@ ul {
     margin-left: 15px;
     margin-right: 15px;
     padding-bottom: 5px;
+    word-wrap: break-word;
 }

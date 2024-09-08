@@ -20,24 +20,24 @@ if(isset($_POST['sign_up'])){
         $result = $database->getReference('users')->push($user_info);
 
         if($result){
-            header('Location: ../login.php');
+            header('Location: login.php');
             exit;
         }
         else{
             $_SESSION['error'] = 'Failed to create the user';
-            header('Location: ../signup.php');
+            header('Location: signup.php');
             exit;
         }
     }
     else{
         $_SESSION['error'] = 'Passwords do not match';
-        header('Location: ../signup.php');
+        header('Location: signup.php');
         exit;
     }
 }
 else{
     $_SESSION['error'] = 'Failed to create the user';
-    header('Location: ../index.php');
+    header('Location: index.php');
     exit;
 }
 ?>

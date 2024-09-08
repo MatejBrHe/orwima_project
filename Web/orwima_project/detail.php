@@ -4,41 +4,51 @@ include('templates/navbar.php');
 ?>
 <link rel="stylesheet" href="styles/detailStyle.css"/>
 
+<?php
+
+include('connect_firebase.php');
+
+if(isset($_GET['id'])){
+    $rice_key = $_GET['id'];
+    $rice = $database->getReference('rices')->getChild($rice_key)->getValue();
+}
+
+?>
+
 <main>
     <a href="index.php">Back to homepage</a>
     <div class="info-box">
-    <div class="title">
-        <h1>Title</h1>
-        <h2>By Username</h2>
+    <div class="title centerHorizontal">
+        <h1><?= $rice['title'] ?></h1>
+        <h2>By <?= $rice['createdBy'] ?></h2>
     </div>
 
     <div class="images centerHorizontal">
         <div class="image-gallery centerHorizontal">
-            <img src="images/Wallpaper3.png" alt="placeholder" height="400" width="700">
-            <img src="images/Wallpaper3.png" alt="placeholder" height="400" width="700">
-            <img src="images/Wallpaper3.png" alt="placeholder" height="400" width="700">
-            <img src="images/Wallpaper3.png" alt="placeholder" height="400" width="700">
+            <img src=<?= $rice['img_path'] ?> alt=<?= $rice['title'] ?> height="400" width="700">
         </div>
-        <a href="">Get dotfiles here</a>
+        <a href=<?= $rice['repo'] ?>>Get dotfiles here</a>
     </div>
 
-    <div class="rating">
-        <h3>Rating: 4.7</h3>
-        <div class="buttons">
-            <input type="button" value="1" class="centerHorizontal">
-            <input type="button" value="2" class="centerHorizontal">
-            <input type="button" value="3" class="centerHorizontal">
-            <input type="button" value="4" class="centerHorizontal">
-            <input type="button" value="5" class="centerHorizontal">
-        </div>
-    </div>
-
-    <div class="comment-section">
+    <div class="comment-section centerHorizontal">
+        <div>
         <h3>Comments:</h3>
+        <?php if(isset($_SESSION['users_session_id'])): ?>
+        <a href="addComment.php?id=<?= $rice_key ?>"><button class="btn">Add comment</button></a>
+        <?php endif; ?>
+        </div>
         <ul>
-            <li><div class="comment"><p class="username">Username:</p><p class="comment-text">This is the best rice I have ever seen. Congrats dude.</p></div></li>
-            <li><div class="comment"><p class="username">Username:</p><p class="comment-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum cupiditate eligendi consequuntur, quibusdam ratione doloribus vel quaerat dicta rerum esse, magnam, recusandae ducimus? Dolores molestias quaerat iusto, repudiandae commodi magni!</p></div></li>
-            <li><div class="comment"><p class="username">Username:</p><p class="comment-text">Nice work.</p></div></li>
+            <?php
+            include('connect_firebase.php');
+            $comments_snapshot = $database->getReference('comments')->orderByChild('onRice')->equalTo($rice_key)->getSnapshot();
+            $comments = $comments_snapshot->getValue();
+            
+            foreach($comments as $comment):
+            ?>
+            <li><div class="comment"><p class="username"><?= $comment['createdBy'] ?>:</p><p class="comment-text"><?= $comment['text'] ?></p></div></li>
+            <?php
+            endforeach;
+            ?>
         </ul>
     </div>
     </div>

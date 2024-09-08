@@ -15,7 +15,7 @@ include('templates/navbar.php');
 <main>
     <a href="index.php">Back to homepage</a>
     <div class="login">
-        <form method="post" action="database/user_signup.php">
+        <form method="post" action="user_signup.php">
             <input type="text" name="username" placeholder="Username" required>
             <input type="email" name="email" placeholder="E-mail" required>
             <input type="password" name="password" placeholder="Password" required>

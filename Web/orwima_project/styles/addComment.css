@@ -1,0 +1,26 @@
+main{
+    width: 100%;
+}
+
+.main_div{
+    margin-top: 100px;
+    width: 600px;
+    background-color: #cccccc;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+form > label{
+    color: white;
+    font-size: 2rem;
+}
+
+.submitBtn{
+    margin-left: 90%;
+}
+
+.submitBtn:hover{
+    color: darkorange;
+    margin-left: 90%;
+}

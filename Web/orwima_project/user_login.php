@@ -16,23 +16,23 @@ if(isset($_POST['login'])){
             if($user['password'] == $password_hash){
                 $_SESSION['users_session_id'] = hash('sha256', $user['username'].date("Y-m-d H:i:s"));
                 $_SESSION['username'] = $user['username'];
-                header('Location: ../index.php');
+                header('Location: index.php');
                 exit;
             }
         }
         $_SESSION['error'] = 'Incorrect username or password';
-        header('Location: ../login.php');
+        header('Location: login.php');
         exit;
     }
     else{
         $_SESSION['error'] = 'Failed to login';
-        header('Location: ../login.php');
+        header('Location: login.php');
         exit;
     }
 }
 else{
     $_SESSION['error'] = 'Failed to login';
-    header('Location: ../index.php');
+    header('Location: login.php');
     exit;
 }
 ?>
