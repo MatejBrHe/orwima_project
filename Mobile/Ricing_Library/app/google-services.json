@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "875017715841",
+    "firebase_url": "https://orwima-project-mbh-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "orwima-project-mbh",
+    "storage_bucket": "orwima-project-mbh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875017715841:android:481f3f7136851a6fd1cd80",
+        "android_client_info": {
+          "package_name": "hr.ferit.matejbreznickiherceg.ricinglibrary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmfXh29gwq3VGfeQIEVl9Ad7F_TvYn1RE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

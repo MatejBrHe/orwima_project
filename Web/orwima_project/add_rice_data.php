@@ -7,7 +7,7 @@ if(isset($_POST['upload_data'])){
     $img_dir = 'images/';
     $name = $_FILES['imgInput']['name'];
     $tmp_name = $_FILES['imgInput']['tmp_name'];
-    $file_name = hash('sha256', date("Y-m-d H:i:s").$name);
+    $file_name = date("Y-m-d_H:i:s").$name;
 
     $title = $_POST['titleInput'];
     $repo = $_POST['repoInput'];
