@@ -48,7 +48,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.android.volley.Request
 import com.android.volley.RequestQueue
@@ -57,7 +56,6 @@ import com.android.volley.toolbox.StringRequest
 import hr.ferit.matejbreznickiherceg.ricinglibrary.CustomJsonParser
 import hr.ferit.matejbreznickiherceg.ricinglibrary.NavigationController
 import hr.ferit.matejbreznickiherceg.ricinglibrary.R
-import hr.ferit.matejbreznickiherceg.ricinglibrary.RiceViewModel
 import hr.ferit.matejbreznickiherceg.ricinglibrary.Routes
 import hr.ferit.matejbreznickiherceg.ricinglibrary.data.Rice
 import hr.ferit.matejbreznickiherceg.ricinglibrary.ui.theme.DarkOrange

@@ -37,9 +37,9 @@ h1 {
 .user {
     right: 0px;
     top: 0px;
+    align-items: center;
     width: 215px;
     height: 80px;
-    align-items: center;
     padding: 10px;
 }
 
