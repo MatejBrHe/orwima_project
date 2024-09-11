@@ -82,7 +82,7 @@ fun RiceDetailsScreen (riceList: List<Rice>, navigation: NavController, riceId: 
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize()
     ) {
-        TitleBar(title = "Ricing Library", iconResource = R.drawable.user)
+        TitleBar(title = "Ricing Library")
         Row(
             horizontalArrangement = Arrangement.Start,
             modifier = Modifier
@@ -139,7 +139,7 @@ fun TitleAndUsername(title: String?, username: String?) {
             fontWeight = FontWeight.Normal
         )
         Text(
-            text = username ?: "No username",
+            text = "By " + username ?: "No username",
             fontSize = 16.sp,
             color = DarkOrange,
             fontStyle = FontStyle.Italic,

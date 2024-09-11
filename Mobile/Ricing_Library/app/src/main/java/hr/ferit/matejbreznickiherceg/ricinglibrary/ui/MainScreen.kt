@@ -73,7 +73,7 @@ fun MainScreen(riceList: List<Rice>, navigation: NavController, queue: RequestQu
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize()
     ) {
-        TitleBar(title = "Ricing Library", R.drawable.user)
+        TitleBar(title = "Ricing Library")
 
         val state = remember {
             mutableStateOf(TextFieldValue(""))
@@ -90,7 +90,7 @@ fun MainScreen(riceList: List<Rice>, navigation: NavController, queue: RequestQu
 }
 
 @Composable
-fun TitleBar(title: String, @DrawableRes iconResource: Int) {
+fun TitleBar(title: String) {
     Row (
         modifier = Modifier
             .height(60.dp)
@@ -108,14 +108,6 @@ fun TitleBar(title: String, @DrawableRes iconResource: Int) {
                 fontStyle = FontStyle.Italic
             ),
             modifier = Modifier.width(335.dp)
-        )
-        Icon(
-            painter = painterResource(id = iconResource),
-            contentDescription = "Username",
-            tint = White,
-            modifier = Modifier
-                .height(35.dp)
-                .width(35.dp)
         )
     }
 }

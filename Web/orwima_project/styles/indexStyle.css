@@ -26,10 +26,19 @@ ul {
     width: 100px;
 }
 
+.imgListDiv{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    overflow: scroll;
+}
+
 .imgList {
     padding: 0 2%;
     display: flex;
     flex-flow: row wrap;
+    align-content: start;
+    align-items: flex-start;
 }
 
 .imgListEl {

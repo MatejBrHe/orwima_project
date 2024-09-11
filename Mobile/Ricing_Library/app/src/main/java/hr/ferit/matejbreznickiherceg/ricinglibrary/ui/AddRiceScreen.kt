@@ -45,7 +45,7 @@ fun AddRiceScreen () {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize()
     ) {
-        TitleBar(title = "Add New Rice", iconResource = R.drawable.user)
+        TitleBar(title = "Add New Rice")
         Row (
             horizontalArrangement = Arrangement.Start,
             modifier = Modifier

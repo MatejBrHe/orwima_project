@@ -17,10 +17,5 @@ form > label{
 }
 
 .submitBtn{
-    margin-left: 90%;
-}
-
-.submitBtn:hover{
-    color: darkorange;
-    margin-left: 90%;
+    margin: 10px auto;
 }

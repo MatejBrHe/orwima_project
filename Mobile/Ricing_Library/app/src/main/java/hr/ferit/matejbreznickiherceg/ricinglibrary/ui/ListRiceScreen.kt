@@ -23,7 +23,7 @@ fun ListRiceScreen(viewModel: List<Rice>, navigation: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize()
     ) {
-        TitleBar(title = "My Rices", iconResource = R.drawable.user)
+        TitleBar(title = "My Rices")
         Row (
             horizontalArrangement = Arrangement.Start,
             modifier = Modifier

@@ -19,6 +19,7 @@ include('templates/navbar.php');
             <input type="submit" name="search" style="display: none;">
         <form>
     </div>
+    <div class=""imgListDiv>
     <ul class="imgList centerHorizontal">
         <?php 
         if(isset($_SESSION['searched'])){ 
@@ -44,6 +45,7 @@ include('templates/navbar.php');
         endforeach;
         ?>
     </ul>
+    </div>
 </main>
 <?php
 include('templates/footer.php');

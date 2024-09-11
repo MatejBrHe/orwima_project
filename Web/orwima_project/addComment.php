@@ -15,7 +15,7 @@ include('templates/navbar.php');
             </div>
             <input type="hidden" name="username" value=<?= $_SESSION['username'] ?>>
             <input type="hidden" name="rice_key" value=<?= $_GET['id'] ?>>
-            <input type="submit" name="add_comment" value="Add" class="submitBtn btn centerHorizontal" id="submit">
+            <input type="submit" name="add_comment" value="Add" class="centerHorizontal submitBtn" id="submit">
         </form>
     </div>
 </main>

@@ -6,6 +6,10 @@
 .data-input > form {
     display: flex;
     flex-direction: column;
+    background-color: #cccccc;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 0px;
 }
 
 .input-text {
@@ -15,4 +19,8 @@
 
 .addImg {
     margin: 50px auto;
+}
+
+.imgInput{
+    margin: 20px auto;
 }

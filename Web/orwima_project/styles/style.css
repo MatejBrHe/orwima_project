@@ -78,46 +78,81 @@ main {
     margin-bottom: auto;
 }
 
-aside {
+.shadow{
+    height: 100%;
+    width: 100%;
     position: absolute;
-    right: 0%;
-    top: 5rem;
-    height: auto;
-    width: 250px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.userMenu-active{
     background-color: darkorange;
-}
-
-aside > div {
     position: absolute;
-    right: 0%;
-    width: 215px;
-    background-color: black;
-    z-index: 1; 
-    display: block; 
-    opacity: 0.7;
+    right: 0;
+    z-index: 2;
+    height: 100%;
+    width: 250px;
+    float: right;
+    text-align: center;
+    box-shadow: 0px 1px 5px;
+    animation-name: slideLeft;
+    animation-duration: 0.4s;
 }
 
-aside > div > .user {
-    margin-left: 10px;
-    margin-top: 1rem;
-    height: 3rem;
-    width: auto;
-}
-
-aside > div > ul {
-    margin-top: 1rem;
-    width: auto;
-}
-
-aside > div > ul > li > a {
+.userMenu-active > *{
     color: white;
-    font-size: 1.3rem;
+}
+
+.userMenu-active > div{
+    height: 120px;
+}
+
+.userMenu-active > div > div{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 210px;
+    float: right;
+}
+
+.userMenu-active > div > *{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.userMenu-active > div > div{
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.userMenu-active > div > div:hover{
+    background-color: rgba(220, 220, 220, 0.3);
+    border-radius: 10px;
+}
+
+.userMenu-active > ul{
+    list-style: none;
+    margin-right: 40px;
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.userMenu-active > ul > li{
+    margin-top: 20px;
+}
+
+.userMenu-active > ul > li > a{
+    color: white;
     text-decoration: none;
+    font-size: 1.25rem;
+    padding: 3px;
 }
 
-aside > div > ul > li > a:hover {
+.userMenu-active > ul > li > a:hover{
     color: white;
-    font-size: 1.3rem;
-    padding: 5px;
+    text-decoration: none;
+    background-color: rgba(220, 220, 220, 0.3);
     border-radius: 5px;
 }
